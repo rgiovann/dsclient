@@ -20,6 +20,8 @@ The code handles 3 exceptions :
 -   _DatabaseException_ [throwable] : When constraint violation is found, in this example we have no assocition with other entity, so there is none. (HTTP 400)
 -   _HttpMessageNotReadableException_ [not throwable] : When web request body contains a bad format JSON. (HTTP 400)
 
+Furthermore, the code has audit attributes that keep track of database row creation/update dates. The database is embedded (H2 database) with a sql seed script for test purposes.
+
 <sub>
 (1) https://medium.com/learnwithnk/best-practices-in-spring-boot-project-structure-layers-of-microservice-versioning-in-api-cadf62bd3459_
 </sub>
